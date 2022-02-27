@@ -1,0 +1,39 @@
+.navbar{
+    color: #884898;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-box{
+    text-decoration: none;
+    color: #884898;
+    padding: .5em 1em;
+    background-color: var(--background-color);
+    position: relative;
+    cursor: pointer;
+    --background-color:#ffffff;
+    --border-size:2px;
+    --accent-color:#884898;
+}
+
+.underline::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--border-size);
+    background-color: var(--accent-color);
+    
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.underline:hover::before,
+.underline:focus::before{
+    transform: scaleX(1);
+    
+}
+
